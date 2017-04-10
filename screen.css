@@ -1,0 +1,57 @@
+/*
+ * Copyright (c) Yaro, distributed
+ * as-is and without warranty under the MIT License.
+ * See http://opensource.org/licenses/MIT for more information.
+ * This information must remain intact.
+ */
+
+.OutlineFunction a {
+    color: darkgray;
+}
+.OutlineFunction a::before {
+    padding-left: 14px;
+    background: url('icons.png') no-repeat;
+    width: 8px;
+    height: 8px;
+    content: ' ';
+}
+.OutlineFunction {
+    white-space: nowrap;
+}
+.OutlineFunction.private > a::before {
+    background-position-y: -16px;
+}
+.OutlineFunction.protected > a::before {
+    background-position-y: -32px;
+}
+.OutlineFunction.class > a::before {
+    background-position-y: -48px;
+}
+.sb-right-content ul.outline {
+    margin-left: -6px;
+}
+#OutlineButton:hover {
+    color: #fff;
+}
+#OutlineMenu li {
+    border: none;
+    white-space: nowrap;
+}
+#OutlineMenu li a {
+    padding: 5px;
+}
+#OutlineMenu li:hover a:hover {
+    background-color: #7F7F7F;
+    color: #fff;
+}
+
+/*
+ * Since OutlineMenu inherits from options-menu, below overrides are required
+ * to make individual elements hoverable rather than the whole block.
+ */
+#OutlineMenu li:hover {
+    background-color: #2E2E2E;
+}
+#OutlineMenu li:hover a {
+    color: #7F7F7F;
+}
